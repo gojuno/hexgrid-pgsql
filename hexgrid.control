@@ -1,0 +1,5 @@
+# hexgrid extension
+comment = 'Hexgrid'
+default_version = '1.0'
+module_pathname = '$libdir/hexgrid'
+relocatable = true

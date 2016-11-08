@@ -1,0 +1,33 @@
+{
+   "name": "hexgrid",
+   "abstract": "Hexgrid",
+   "description": "Configurable hex grid on abstract surface",
+   "version": "1.0.0",
+   "maintainer": [
+      "Alexander Verbitsky <averbitsky@gojuno.com>"
+   ],
+   "license": "BSD",
+   "provides": {
+      "hexgrid": {
+         "abstract": "Configurable hex grid on abstract surface",
+         "file": "sql/hexgrid.sql",
+         "docfile": "doc/hexgrid.md",
+         "version": "1.0.0"
+      }
+   },
+   "resources": {
+      "bugtracker": {
+         "web": "https://github.com/gojuno/hexgrid-pgsql/issues/"
+      },
+      "repository": {
+        "url":  "git://github.com/gojuno/hexgrid-pgsql.git",
+        "web":  "https://github.com/gojuno/hexgrid-pgsql",
+        "type": "git"
+      }
+   },
+   "generated_by": "Alexander Verbitsky",
+   "tags": [
+      "hexgrid",
+      "morton code"
+   ]
+}

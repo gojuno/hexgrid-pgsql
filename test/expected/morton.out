@@ -1,0 +1,12 @@
+select morton_pack(-13, 42) as code;
+        code         
+---------------------
+ 4611686018427390169
+(1 row)
+
+select morton_unpack(morton_pack(-13, 42)) as hex_qr;
+  hex_qr  
+----------
+ {-13,42}
+(1 row)
+
