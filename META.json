@@ -6,7 +6,7 @@
    "maintainer": [
       "Alexander Verbitsky <averbitsky@gojuno.com>"
    ],
-   "license": "BSD",
+   "license": "bsd",
    "provides": {
       "hexgrid": {
          "abstract": "Configurable hex grid on abstract surface",
@@ -26,6 +26,10 @@
       }
    },
    "generated_by": "Alexander Verbitsky",
+   "meta-spec": {
+      "version": "1.0.0",
+      "url": "http://pgxn.org/meta/spec.txt"
+   },
    "tags": [
       "hexgrid",
       "morton code"
