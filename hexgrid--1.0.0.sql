@@ -1,5 +1,5 @@
 
--- \echo use "create extension hexgrid" to load this file. \quit
+\echo use "create extension hexgrid" to load this file. \quit
 
 -- types
 drop type if exists hex_orientation cascade;
@@ -52,7 +52,7 @@ as $function$
         name,
         f,
         b,
-        ( 
+        (
             select array(
                 select
                     sin(2.0 * pi() * (i + start_angle) / 6.0)
