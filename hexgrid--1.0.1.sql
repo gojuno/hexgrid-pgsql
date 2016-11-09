@@ -30,7 +30,7 @@ create type hexagon as (
 
 drop table if exists hexgrids;
 create table hexgrids (
-    id          serial,
+    id          serial primary key,
     params      hexgrid,
     tag         text
 );

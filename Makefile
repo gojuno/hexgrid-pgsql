@@ -1,5 +1,6 @@
 EXTENSION 	 = hexgrid
-DATA		 = hexgrid--1.0.0.sql
+DATA		 = hexgrid--1.0.1.sql
+DOCS		 = $(wildcard doc/*.md)
 TESTS        = $(wildcard test/sql/*.sql)
 REGRESS      = $(patsubst test/sql/%.sql,%,$(TESTS))
 REGRESS_OPTS = --inputdir=test --load-language=plpgsql --load-extension=postgis --load-extension=hexgrid

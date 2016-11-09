@@ -24,7 +24,7 @@ insert into
 select ST_SetSRID(ST_MakePoint(10000, 10000), 3857)::hexagon as hexagon;
  hexagon 
 ---------
- (113,1)
+ (115,1)
 (1 row)
 
 select ST_AsText(ST_Centroid((28, 1)::hexagon)) as center;
