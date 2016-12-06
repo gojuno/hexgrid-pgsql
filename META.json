@@ -7,20 +7,20 @@
       "Alexander Verbitsky <averbitsky@gojuno.com>"
    ],
    "license": "bsd",
+   "prereqs": {
+      "runtime": {
+         "requires": {
+            "PostgreSQL": "9.6.0",
+            "PostGIS": "2.3.0"
+         }
+      }
+   },
    "provides": {
       "hexgrid": {
          "abstract": "Configurable hex grid on abstract surface",
          "file": "sql/hexgrid.sql",
          "docfile": "doc/hexgrid.md",
          "version": "1.0.2"
-      },
-      "prereqs": {
-         "runtime": {
-            "requires": {
-               "PostgreSQL": "9.6.0",
-               "PostGIS": "2.3.0"
-            }
-         }
       }
    },
    "resources": {
