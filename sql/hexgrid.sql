@@ -239,7 +239,9 @@ begin
     sinuses = (hexgrid.orientation).sinuses;
     multiline = (
     select
-        ST_LineFromMultiPoint(ST_Collect(geom))
+        ST_LineFromMultiPoint(
+            ST_SnapToGrid(ST_Collect(geom), 0.000001)
+        )
     from
         (select
             ST_SetSRID(ST_MakePoint(
