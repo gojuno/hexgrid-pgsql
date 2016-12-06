@@ -1,0 +1,12 @@
+1.0.2
+-- Fixed a bug related with float arithmetic
+-- Using 'pgtap' for testing
+-- Repository refactoring
+
+
+1.0.1
+-- Minor bugfixes
+
+
+1.0.0
+-- First public version
