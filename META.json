@@ -2,7 +2,7 @@
    "name": "hexgrid",
    "abstract": "Hexgrid",
    "description": "Configurable hex grid on abstract surface",
-   "version": "1.0.1",
+   "version": "1.0.2",
    "maintainer": [
       "Alexander Verbitsky <averbitsky@gojuno.com>"
    ],
@@ -12,7 +12,15 @@
          "abstract": "Configurable hex grid on abstract surface",
          "file": "sql/hexgrid.sql",
          "docfile": "doc/hexgrid.md",
-         "version": "1.0.1"
+         "version": "1.0.2"
+      },
+      "prereqs": {
+         "runtime": {
+            "requires": {
+               "PostgreSQL": "9.6.0",
+               "PostGIS": "2.3.0"
+            }
+         }
       }
    },
    "resources": {
