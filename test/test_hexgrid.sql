@@ -24,9 +24,18 @@ insert into
             ST_SetSRID(ST_MakePoint(20, 10), 3857)
         )::hexgrid,
         'flat_grid_20x10'
+    ),
+    (
+        3,
+        (
+        hex_OrientationFlat(),
+        3857,
+        ST_SetSRID(ST_MakePoint(0, 0), 3857),
+        ST_SetSRID(ST_MakePoint(10, 10), 3857))::hexgrid,
+        'flat_grid_10x10'
     );
 
-select plan(7);
+select plan(8);
 
 select is(
     ST_SetSRID(ST_MakePoint(10000, 10000), 3857)::hexagon,
@@ -72,5 +81,24 @@ select is(
     morton_unpack((ST_Hexagon('SRID=3857;POINT(-666 -13)', 2)).code),
     array[-22, 9]::int8[]
 );
+
+
+select
+    is(
+        ST_NPoints(ST_Union(h::geometry)),
+        23
+    )
+from
+    ST_HexagonCoverage(
+        GeomFromEWKT(
+            'SRID=3857;POLYGON((
+                0 0,
+                30 0,
+                30 30,
+                0 30,
+            0 0))'
+        ),
+        3
+    ) as h;
 
 rollback;
