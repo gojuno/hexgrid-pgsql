@@ -239,15 +239,17 @@ begin
     sinuses = (hexgrid.orientation).sinuses;
     multiline = (
     select
-        ST_LineFromMultiPoint(
-            ST_SnapToGrid(ST_Collect(geom), 0.000001)
-        )
+        ST_SetSRID(
+            ST_LineFromMultiPoint(
+                ST_SnapToGrid(ST_Collect(geom), 0.000001)
+            ),
+            hexgrid.srid)
     from
         (select
-            ST_SetSRID(ST_MakePoint(
+            ST_MakePoint(
                 ST_X(hexgrid.size) * cosinuses[i] + ST_X(center),
                 ST_Y(hexgrid.size) * sinuses[i] + ST_Y(center)
-            ), hexgrid.srid) as geom
+            ) as geom
         from
             generate_series(1, 6) as i) as points
     );
