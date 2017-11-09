@@ -2,7 +2,7 @@
    "name": "hexgrid",
    "abstract": "Hexgrid",
    "description": "Configurable hex grid on abstract surface",
-   "version": "1.0.2",
+   "version": "1.0.3",
    "maintainer": [
       "Alexander Verbitsky <averbitsky@gojuno.com>"
    ],
@@ -20,7 +20,7 @@
          "abstract": "Configurable hex grid on abstract surface",
          "file": "sql/hexgrid.sql",
          "docfile": "doc/hexgrid.md",
-         "version": "1.0.2"
+         "version": "1.0.3"
       }
    },
    "resources": {
